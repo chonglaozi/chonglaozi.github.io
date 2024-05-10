@@ -3,12 +3,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>M3U Demo</title>
+    <title>M3U List</title>
 </head>
 <body>
-    <h1>M3U demo</h1>
-    <ul>
-        <li><a href="demo.m3u"><img src="https://github.com/fanmingming/live/tree/main/tv" alt="M3U demo"><</a></li>
-        </ul>
+    <h1>M3U list</h1>
+    <ul id="playlist-list"></ul>
+    <script>
+        // M3U 
+        fetch('demo.m3u')
+            .then(response => response.text())
+            .then(data => {
+                // M3U
+                const lines = data.split('\n');
+                const playlistItems = [];
+
+                for (let i = 0; i < lines.length; i++) {
+                    if (lines[i].startsWith('#EXTINF:')) {
+                        const title = lines[i].split(',')[1].trim();
+
+                        if (lines[i + 1]) {
+                            const url = lines[i + 1].trim();
+                            playlistItems.push({ title, url });
+                        }
+                    }
+                }
+
+                // 
+                const playlistList = document.getElementById('playlist-list');
+                playlistItems.forEach(item => {
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    const icon = document.createElement('img');
+
+                    link.href = item.url;
+                    link.target = '_blank';
+                    icon.src = 'https://live.fanmingming.com/tv/CCTV1.png'; 
+                    icon.alt = item.title;
+
+                    link.appendChild(icon);
+                    listItem.appendChild(link);
+                    playlistList.appendChild(listItem);
+                });
+            });
+    </script>
 </body>
 </html>
