@@ -1,15 +1,18 @@
 #EXTM3U
 #EXTINF:CCTV1,https://live.fanmingming.com/tv/CCTV1.png 
-http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226559/index.m3u8
+https://live.fanmingming.com/player/?vurl=http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226559/index.m3u8
 
 #EXTINF:CCTV2,https://live.fanmingming.com/tv/CCTV2.png
-http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226540/index.m3u8
+https://live.fanmingming.com/player/?vurl=http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226540/index.m3u8
 
 #EXTINF:CCTV10,https://live.fanmingming.com/tv/CCTV10.png
-http://[2409:8087:1a01:df::4077]:80/PLTV/88888888/224/3221225677/index.m3u8
+https://live.fanmingming.com/player/?vurl=http://[2409:8087:1a01:df::4077]:80/PLTV/88888888/224/3221225677/index.m3u8
 
 #EXTINF:CCTV11,https://live.fanmingming.com/tv/CCTV11.png
-http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226565/index.m3u8
+https://live.fanmingming.com/player/?vurl=http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226565/index.m3u8
 
 #EXTINF:CCTV12,https://live.fanmingming.com/tv/CCTV12.png
-http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225731/index.m3u8
+https://live.fanmingming.com/player/?vurl=http://[2409:8087:1a01:df::4077]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225731/index.m3u8
+
+#EXTINF:CCTV12,https://live.fanmingming.com/tv/CCTV13.png
+https://live.fanmingming.com/player/?vurl=https://0472.org/his/cgtn.m3u8
