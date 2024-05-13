@@ -1,47 +1,13 @@
 <!DOCTYPE html>
 <html>
+<!DOCTYPE html>
+<html>
 <head>
-    <title>M3U 播放列表</title>
+    <title>M3U ��վ</title>
 </head>
 <body>
-    <h1>M3U 播放列表</h1>
-    <ul id="playlist-list"></ul>
-    <script>
-        // 获取 M3U 文件内容
-        fetch('demo.m3u')
-            .then(response => response.text())
-            .then(data => {
-                // 解析 M3U 文件内容
-                const lines = data.split('\n');
-                const playlistItems = [];
-
-                for (let i = 0; i < lines.length; i++) {
-                    if (lines[i].startsWith('#EXTINF:')) {
-                        const title = lines[i].split(',')[0].trim(); // 获取频道名称
-                        const logoURL = lines[i].split(',')[1].trim(); // 获取频道图标链接
-                        const url = lines[i + 1]; // 获取播放地址
-
-                        playlistItems.push({ title, logoURL, url });
-                    }
-                }
-
-                // 创建播放列表项
-                const playlistList = document.getElementById('playlist-list');
-                playlistItems.forEach(item => {
-                    const listItem = document.createElement('li');
-                    const link = document.createElement('a');
-                    const icon = document.createElement('img');
-
-                    link.href = item.url;
-                    link.target = '_blank'; // 在新标签页中打开播放链接
-                    icon.src = item.logoURL; // 设置图标链接
-                    icon.alt = item.title; // 设置图标 alt 属性
-
-                    link.appendChild(icon);
-                    listItem.appendChild(link);
-                    playlistList.appendChild(listItem);
-                });
-            });
-    </script>
+    <h1>M3U �����б�</h1>
+    <ul>
+        </ul>
 </body>
 </html>
